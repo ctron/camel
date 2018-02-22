@@ -499,7 +499,25 @@ public class SubscriptionManager {
                 best = ep;
             }
         }
-        return best;
+        return overrideHost(best);
+    }
+
+    private EndpointDescription overrideHost(EndpointDescription desc) {
+        if (desc == null) {
+            return null;
+        }
+
+        if (!this.configuration.isOverrideHost()) {
+            return desc;
+        }
+
+        return new EndpointDescription(overrideHost(desc.getEndpointUrl()), desc.getServer(), desc.getServerCertificate(), desc.getSecurityMode(), desc.getSecurityPolicyUri(),
+                                       desc.getUserIdentityTokens(), desc.getTransportProfileUri(), desc.getSecurityLevel());
+    }
+
+    private String overrideHost(final String endpointUrl) {
+        // TODO Auto-generated method stub
+        return null;
     }
 
     protected synchronized void whenConnected(final Worker<Connected> worker) {

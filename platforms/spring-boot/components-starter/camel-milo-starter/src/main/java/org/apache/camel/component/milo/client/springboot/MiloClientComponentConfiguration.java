@@ -169,6 +169,11 @@ public class MiloClientComponentConfiguration
          * The key password
          */
         private String keyPassword;
+        /**
+         * Override the server reported endpoint host with the host from the
+         * endpoint URI
+         */
+        private Boolean overrideHost = false;
 
         public String getEndpointUri() {
             return endpointUri;
@@ -288,6 +293,14 @@ public class MiloClientComponentConfiguration
 
         public void setKeyPassword(String keyPassword) {
             this.keyPassword = keyPassword;
+        }
+
+        public Boolean getOverrideHost() {
+            return overrideHost;
+        }
+
+        public void setOverrideHost(Boolean overrideHost) {
+            this.overrideHost = overrideHost;
         }
     }
 }

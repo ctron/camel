@@ -95,7 +95,7 @@ with the following path and query parameters:
 | *endpointUri* | *Required* The OPC UA server endpoint |  | String
 |===
 
-==== Query Parameters (22 parameters):
+==== Query Parameters (23 parameters):
 
 [width="100%",cols="2,5,^1,2",options="header"]
 |===
@@ -104,10 +104,10 @@ with the following path and query parameters:
 | *defaultAwaitWrites* (common) | Default await setting for writes | false | boolean
 | *node* (common) | The node definition (see Node ID) |  | ExpandedNodeId
 | *samplingInterval* (common) | The sampling interval in milliseconds |  | Double
-| *bridgeErrorHandler* (consumer) | Allows for bridging the consumer to the Camel routing Error Handler, which mean any exceptions occurred while the consumer is trying to pickup incoming messages, or the likes, will now be processed as a message and handled by the routing Error Handler. By default the consumer will use the org.apache.camel.spi.ExceptionHandler to deal with exceptions, that will be logged at WARN or ERROR level and ignored. | false | boolean
-| *exceptionHandler* (consumer) | To let the consumer use a custom ExceptionHandler. Notice if the option bridgeErrorHandler is enabled then this options is not in use. By default the consumer will deal with exceptions, that will be logged at WARN or ERROR level and ignored. |  | ExceptionHandler
+| *bridgeErrorHandler* (consumer) | Allows for bridging the consumer to the Camel routing Error Handler which mean any exceptions occurred while the consumer is trying to pickup incoming messages or the likes will now be processed as a message and handled by the routing Error Handler. By default the consumer will use the org.apache.camel.spi.ExceptionHandler to deal with exceptions that will be logged at WARN or ERROR level and ignored. | false | boolean
+| *exceptionHandler* (consumer) | To let the consumer use a custom ExceptionHandler. Notice if the option bridgeErrorHandler is enabled then this options is not in use. By default the consumer will deal with exceptions that will be logged at WARN or ERROR level and ignored. |  | ExceptionHandler
 | *exchangePattern* (consumer) | Sets the exchange pattern when the consumer creates an exchange. |  | ExchangePattern
-| *synchronous* (advanced) | Sets whether synchronous processing should be strictly used, or Camel is allowed to use asynchronous processing (if supported). | false | boolean
+| *synchronous* (advanced) | Sets whether synchronous processing should be strictly used or Camel is allowed to use asynchronous processing (if supported). | false | boolean
 | *applicationName* (client) | The application name | Apache Camel adapter for Eclipse Milo | String
 | *applicationUri* (client) | The application URI | http://camel.apache.org/EclipseMilo/Client | String
 | *channelLifetime* (client) | Channel lifetime in milliseconds |  | Long
@@ -118,6 +118,7 @@ with the following path and query parameters:
 | *keyStoreUrl* (client) | The URL where the key should be loaded from |  | URL
 | *maxPendingPublishRequests* (client) | The maximum number of pending publish requests |  | Long
 | *maxResponseMessageSize* (client) | The maximum number of bytes a response message may have |  | Long
+| *overrideHost* (client) | Override the server reported endpoint host with the host from the endpoint URI | false | boolean
 | *productUri* (client) | The product URI | http://camel.apache.org/EclipseMilo | String
 | *requestTimeout* (client) | Request timeout in milliseconds |  | Long
 | *sessionName* (client) | Session name |  | String

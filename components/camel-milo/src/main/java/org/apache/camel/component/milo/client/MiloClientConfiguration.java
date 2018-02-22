@@ -79,6 +79,9 @@ public class MiloClientConfiguration implements Cloneable {
     @UriParam(label = "client", secret = true)
     private String keyPassword;
 
+    @UriParam(label = "client")
+    private boolean overrideHost;
+
     public MiloClientConfiguration() {
     }
 
@@ -261,6 +264,18 @@ public class MiloClientConfiguration implements Cloneable {
 
     public String getKeyPassword() {
         return this.keyPassword;
+    }
+
+    /**
+     * Override the server reported endpoint host with the host from the
+     * endpoint URI
+     */
+    public void setOverrideHost(boolean overrideHost) {
+        this.overrideHost = overrideHost;
+    }
+
+    public boolean isOverrideHost() {
+        return overrideHost;
     }
 
     @Override
